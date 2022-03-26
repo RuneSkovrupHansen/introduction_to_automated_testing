@@ -14,11 +14,14 @@ to be performed."""
 
 class TestCharacter(unittest.TestCase):
 
+
     def setUp(self):
         self.character = Character()
 
+
     def tearDown(self):
         self.character = None
+
 
     def test_set_level_valid(self):
 
