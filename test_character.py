@@ -74,7 +74,7 @@ class TestCharacter(unittest.TestCase):
         ret = self.character.set_name(new_name)
 
         self.assertTrue(ret) # Check that methods returns true
-        self.assertEquals(self.character.name, new_name) # Check that name has changed
+        self.assertEqual(self.character.name, new_name) # Check that name has changed
 
     
     def test_set_name_invalid(self):
@@ -89,7 +89,7 @@ class TestCharacter(unittest.TestCase):
         ret = self.character.set_name(new_name)
 
         self.assertFalse(ret) # Check that methods returns false
-        self.assertEquals(self.character.name, original_name) # Check that name has not changed
+        self.assertEqual(self.character.name, original_name) # Check that name has not changed
 
 
 if __name__ == "__main__":
