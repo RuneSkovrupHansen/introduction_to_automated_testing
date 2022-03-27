@@ -67,9 +67,7 @@ class TestCharacter(unittest.TestCase):
     def test_set_name_valid(self):
 
         # Create new name with min length
-        new_name = ""
-        for _ in range(self.character._MIN_NAME_LENGTH):
-            new_name += "a"
+        new_name =  "a" * self.character._MIN_NAME_LENGTH
 
         ret = self.character.set_name(new_name)
 
@@ -82,9 +80,7 @@ class TestCharacter(unittest.TestCase):
         original_name = self.character.name
 
         # Create new name with max length + 1
-        new_name = ""
-        for _ in range(self.character._MAX_NAME_LENGTH+1):
-            new_name += "a"
+        new_name =  "a" * (self.character._MAX_NAME_LENGTH+1)
 
         ret = self.character.set_name(new_name)
 
